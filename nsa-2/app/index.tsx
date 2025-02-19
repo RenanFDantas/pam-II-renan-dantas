@@ -6,15 +6,15 @@ export default function Login() {
   return (
     <View style = {estilos.pagina}>
       <Text style = {estilos.titulo}>Login</Text>
-
-        <TextInput placeholder="Usuário" style = {estilos.texto} />
-        <TextInput placeholder="Senha" style = {estilos.texto} />
-        
-        <Link href = "/home" asChild>
-          <TouchableOpacity style = {estilos.botao}>
-            <Text style = {{ color: "white" }}>Entrar</Text>
-          </TouchableOpacity>
-        </Link>
+    <View style = {estilos.caixa}>
+      <TextInput placeholder="Usuário" style = {estilos.texto} />
+      <TextInput placeholder="Senha" style = {estilos.texto} />
+    </View>
+      <Link href = "/home" asChild>
+        <TouchableOpacity style = {estilos.botao}>
+          <Text>Entrar</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
   );
 }
@@ -24,11 +24,22 @@ const estilos = StyleSheet.create ({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "lightgray",
   },
 
   titulo: {
     fontSize: 32,
     marginBottom: 20,
+    fontWeight: "bold",
+  },
+
+  caixa: {
+    width: "15%",
+    backgroundColor: "white",
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 10,
+    alignItems: "center",
   },
 
   texto: {
@@ -46,5 +57,6 @@ const estilos = StyleSheet.create ({
     borderRadius: 8,
     marginTop: 20,
     backgroundColor: "gray",
+    color: "white",
   }
 })
